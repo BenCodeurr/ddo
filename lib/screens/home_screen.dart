@@ -1,3 +1,4 @@
+import 'package:ddo/screens/add_task_screen.dart';
 import 'package:ddo/widgets/taks_list.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.blue.shade500,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(context: context, builder: (context) => const AddTaskScreen());
+        },
         backgroundColor: Colors.blue.shade500,
         child: const Icon(
           Icons.add,
